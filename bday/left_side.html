@@ -81,17 +81,27 @@
             <p>||</p>
             <p>||</p>
         </div>
+
         <div class="d-flex justify-content-between">
             <p>||</p>
             <p>||</p>
         </div>
         <div class="d-flex justify-content-between">
             <p>||</p>
-            
+            <div class="d-flex justify-content-between" style="width: 200px">
+                <p>_____________________🌷______</p>
+            </div>
+
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
             <p>||</p>
         </div>
         <div class="d-flex justify-content-between">
             <p>||</p>
+
             <div class="d-flex justify-content-between" style="width: 200px">
                 <p>||</p>
                 <p>||</p>
@@ -126,7 +136,7 @@
             <p>||</p>
             <div class="d-flex justify-content-between" style="width: 200px">
                 <p>||</p>
-                <button class="btn" id="btnPaper">🎁</button>
+                <button class="btn" id="btnPaper">📜</button>
                 <p>||</p>
             </div>
             <div></div>
@@ -141,19 +151,22 @@
     
     <div class="modal-window container d-none" id="modalWindow">
         <button id="btnPaperClose">Закрыть</button>
-        <img src="assets/birthday-296.jpg" alt="" style="width: 100%;">
-        <p>Часть кода находится в instagram, удачи в поисках:):)</p>
-
-
+        <p>Даша, мне удалось найти часть кода! Она находится в instagram! Быстрее найди ее! Так же в вентеляцию я передал ...</p>
     </div>
     <div class="modal-window container d-none" id="modalWindowDesh">
         <button id="btnPaperCloseDesh">Закрыть</button>
         
-
-        <p>Поздравляем, ты нашла декодер в вентеляции! Вставь сюда код, сложеный из всех частей.</p>
-        <input type="text" id="input-id" placeholder="Код">
-        <button onclick="openDor()">Получить код</button>
-        <p id="Message"></p>
+        <p>*Записка упала с вентиляции*</p>
+        <div class="border text-center">
+            <h5>
+                Устройство для расшифровка кода
+            </h5>
+            <p>Вставь сюда код, сложеный из всех частей.</p>
+            <input type="text" id="input-id" placeholder="Код">
+            <button onclick="openDor()">Получить код</button>
+            <p id="Message"></p>
+        </div>
+        
 
     </div>
     <script>
@@ -181,12 +194,12 @@
             let password = document.getElementById("input-id").value
             console.log(password);
             let message = document.getElementById("Message");
-             if (password == "dxBcd3mKD") {
+             if (password == "dxBcd3tD") {
                 message.innerHTML = "Code: 27102003";
             } else {
                 message.innerHTML = "Код неправильный.";
                 if (password == "xx2312f59!3") {
-                    message.innerHTML = "Ты действительно думаешь, что это будет так легко?)";
+                    message.innerHTML = "<h3>Код неправильный!</h3> <br> Ты все еще думаешь, что это будет так легко?)";
                 }
             }
         }

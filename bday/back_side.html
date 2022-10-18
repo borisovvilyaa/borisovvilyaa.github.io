@@ -148,7 +148,7 @@
             <div></div>
             <div class="d-flex justify-content-between" style="width: 200px">
                 <p>||</p>
-                <button id="btnPaper">Кодовый замок</button>
+                <button id="btnPaper">🔒</button>
                 <p>||</p>
             </div>
             <p>||</p>
@@ -191,7 +191,7 @@
         <button id="btnPaperClose">Закрыть</button>
         <h2>Введите код</h2>
         <input type="text" id="input-id">
-                <button onclick="openDor()">Открыть</button>
+                <button onclick="openDor()">🔑</button>
                 <p id="Message"></p>
     </div>
     <script>
@@ -200,8 +200,9 @@
             let password = document.getElementById("input-id").value
             console.log(password);
             let message = document.getElementById("Message");
-             if (password == "dxBcd3mKD") {
-                alert("Game over.!!!");
+             if (password == "27102003") {
+                alert("Игра пройдена, время: супер быстро!");
+                document.location.href="/end.html";
             } else {
                 message.innerHTML = "Код неправильный.";
                 if (password == "xx2312f59!3") {
