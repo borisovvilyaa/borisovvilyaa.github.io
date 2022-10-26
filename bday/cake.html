@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cake</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+    <style>
+        @import url(https://fonts.googleapis.com/css?family=Lato:300italic);
+        html, body {
+            height: 100%;
+        }
+        body {
+            background: #a27bcc;
+            background: -moz-radial-gradient(center,ellipse cover,#a27bcc 0%,#6c5299 100%);
+            background: -webkit-gradient(radial,center center,0px,center center,100%,color-stop(0%,#a27bcc),color-stop(100%,#6c5299));
+            background: -webkit-radial-gradient(center,ellipse cover,#a27bcc 0%,#6c5299 100%);
+            background: -o-radial-gradient(center,ellipse cover,#a27bcc 0%,#6c5299 100%);
+            background: -ms-radial-gradient(center,ellipse cover,#a27bcc 0%,#6c5299 100%);
+            background: radial-gradient(ellipse at center,#a27bcc 0%,#6c5299 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#a27bcc',endColorstr='#6c5299',GradientType=1);
+        }
+        .cake {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-left: -50px;
+            margin-top: -50px;
+            width: 100px;
+            height: 100px;
+        }
+        .cake:after {
+            background: #ebe3e1;
+            border-radius: 100px;
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100px;
+            height: 2px;
+        }
+        .velas {
+            background: #ffffff;
+            border-radius: 100%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-left: -2.5px;
+            margin-top: -8.3333333333333px;
+            width: 5px;
+            height: 16.666666666667px;
+        }
+        .velas:after, .velas:before {
+            background: rgba(255,0,0,0.4);
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 2.2222222222222px;
+        }
+        .velas:after {
+            top: 25%;
+            left: 0;
+        }
+        .velas:before {
+            top: 45%;
+            left: 0;
+        }
+        .fuego {
+            border-radius: 100%;
+            box-shadow: 0 0 40px 10px rgba(248,233,209,0.2);
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            margin-left: -3.3333333333333px;
+            width: 6.6666666666667px;
+            height: 12.5px;
+        }
+        .fuego:nth-child(1) {
+            animation: fuego 2s infinite;
+        }
+        .fuego:nth-child(2) {
+            animation: fuego 1.5s infinite;
+        }
+        .fuego:nth-child(3) {
+            animation: fuego 1s infinite;
+        }
+        .fuego:nth-child(4) {
+            animation: fuego 0.5s infinite;
+        }
+        .fuego:nth-child(5) {
+            animation: fuego 0.2s infinite;
+        }
+        @keyframes fuego {
+            0% {
+                background: rgba(254,248,97,0.5);
+                transform: translateY(0) scale(1);
+            }
+            50% {
+                background: rgba(255,50,0,0.1);
+                transform: translateY(-20px) scale(0);
+            }
+            100% {
+                background: rgba(254,248,97,0.5);
+                transform: translateY(0) scale(1);
+            }
+        }
+        .cobertura {
+            background: #ece7e3;
+            border-radius: 100px/2;
+            position: absolute;
+            top: 60%;
+            left: 50%;
+            margin-left: -27.777777777778px;
+            margin-top: -5px;
+            width: 55.555555555556px;
+            height: 12.5px;
+            z-index: 10;
+        }
+        .cobertura:after, .cobertura:before {
+            background: #ece7e3;
+            border-radius: 100px;
+            content: "";
+            position: absolute;
+            width: 5px;
+            height: 10px;
+        }
+        .cobertura:after {
+            top: 6.6666666666667px;
+            right: 14.285714285714px;
+        }
+        .cobertura:before {
+            top: 10px;
+            right: 9.0909090909091px;
+        }
+        .bizcocho {
+            background: #6d3826;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            margin-left: -25px;
+            width: 50px;
+            height: 33.333333333333px;
+        }
+        .bizcocho:after, .bizcocho:before {
+            background: rgba(236,231,227,0.6);
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 5px;
+        }
+        .bizcocho:after {
+            top: 30%;
+            left: 0;
+        }
+        .bizcocho:before {
+            top: 60%;
+            left: 0;
+        }
+        h1, p {
+            font-family: 'Lato', sans-serif;
+            font-weight: 300;
+            font-style: italic;
+            text-align: center;
+            width: 100%;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+        h1 {
+            color: #6c5299;
+            font-size: 1em;
+            margin-top: 6.8em;
+        }
+        p {
+            color: rgba(236,231,227,0.6);
+            font-size: 0.8em;
+            line-height: 2em;
+        }
+        .confetes div {
+        width: 16px;
+        height: 16px;
+        position: absolute;
+        transform-origin: left top;
+        animation: efeito-folha-caindo 5s ease-in-out -2s infinite;
+        }
+        .confete-um {
+        left: 15%;
+        background: red;
+        animation-delay: -5s !important;
+        }
+        .confete-dois {
+        left: 30%;
+        background: yellow;
+        animation-delay: -3s !important;
+        }
+        .confete-tres {
+        left: 55%;
+        background: green;
+        animation-delay: -4s !important;
+        }
+        .confete-quatro {
+        left: 70%;
+        background: blue;
+        animation-delay: -2.5s !important;
+        }
+        .confete-cinco {
+        left: 90%;
+        background: purple;
+        animation-delay: -1s !important;
+        }
+
+        @keyframes efeito-folha-caindo {
+        0% {
+            transform: rotate(15deg) rotateY(0deg) translate(0);
+        }
+        25% {
+            transform: rotate(5deg) rotateY(1turn) translate(-5vw, 20vh);
+        }
+        50% {
+            transform: rotate(15deg) rotateY(2turn) translate(5vw, 60vh);
+        }
+        75% {
+            transform: rotate(5deg) rotateY(3turn) translate(-10vw, 80vh);
+        }
+        100% {
+            transform: rotate(15deg) rotateY(4turn) translate(10vw, 110vh);
+        }
+        }
+
+        .container {
+        width: 100vw;
+        height: 100vh;
+
+        font-family: sans-serif;
+        
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        }
+        .container div {
+            padding: 40px;
+            backdrop-filter: blur(10px);
+        animation: alerta 3s ease-in-out -2s infinite;
+        }
+
+        @keyframes alerta {
+        0% {
+            font-size: 2.9rem;
+        }
+        50% {
+            font-size: 3rem;
+        }
+        100% {
+            font-size: 2.9rem;
+        }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="d-none" id="confetes">
+        <div class="confetes">
+            <div class="confete-um"></div>
+            <div class="confete-dois"></div>
+            <div class="confete-tres"></div>
+            <div class="confete-quatro"></div>
+            <div class="confete-cinco"></div>
+        </div>
+    </div>
+    <div class="cake">
+        <div class="velas" id="velas">
+            <div class="fuego" id="fuego"></div>
+            <div class="fuego" id="fuego"></div>
+            <div class="fuego" id="fuego"></div>
+            <div class="fuego" id="fuego"></div>
+            <div class="fuego" id="fuego"></div>
+        </div>
+        <div class="cobertura"></div>
+        <div class="bizcocho"></div>
+        
+        <div id="text" class="d-none animate__animated animate__tada">
+            
+            <h1>happy birthday!</h1>
+            <p>Daria</p>
+        </div>
+        <button class="btn fw-bold" onclick="displayNone()" style="margin-top: 100px; background: rgba(255,0,0,0.4); color: rgba(236,231,227,0.6);" id="btn">Задуть свечу</button>
+    </div>
+    <script>
+        function displayNone() {
+            let btn = document.getElementById("btn");
+            let text = document.getElementById("text");
+            let velas = document.getElementById("velas");
+            let confete = document.getElementById("confetes");
+            text.classList.remove("d-none");
+            confete.classList.remove("d-none");
+            velas.classList.add("d-none");
+            btn.classList.add("d-none");
+            
+        }
+    </script>
+</body>
+</html>
